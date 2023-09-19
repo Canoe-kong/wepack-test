@@ -15,7 +15,18 @@
   \*****************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("// 通过 CommonJS 规范导入 show 函数\nconst show = __webpack_require__(/*! ./show.js */ \"./show.js\");\n// 执行 show 函数\nshow('Webpack');\n\n\n//# sourceURL=webpack://webpack-test/./main.js?");
+eval("// 通过 CommonJS 规范导入 CSS 模块\n__webpack_require__(/*! ./main.css */ \"./main.css\");\n// 通过 CommonJS 规范导入 show 函数\nconst show = __webpack_require__(/*! ./show.js */ \"./show.js\");\n// 执行 show 函数\nshow('Webpack');\n\n\n//# sourceURL=webpack://webpack-test/./main.js?");
+
+/***/ }),
+
+/***/ "./main.css":
+/*!******************!*\
+  !*** ./main.css ***!
+  \******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack-test/./main.css?");
 
 /***/ }),
 
@@ -54,6 +65,18 @@ eval("// 操作 DOM 元素，把 content 显示到网页上\nfunction show(conte
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	
